@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A6D80C72-7230-4416-99B1-86F717FD1785}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OpenSSL</RootNamespace>
+    <AssemblyName>ManagedOpenSsl</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AssemblyName>ManagedOpenSsl-x64</AssemblyName>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;x64 _LOGn _BUILD_CHAINn</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <AssemblyName>ManagedOpenSsl-x64</AssemblyName>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <AssemblyName>ManagedOpenSsl</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>false</Optimize>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <AssemblyName>ManagedOpenSsl</AssemblyName>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <AssemblyName>ManagedOpenSsl-x64</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;x64</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <AssemblyName>ManagedOpenSsl-x64</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core\Asn1DateTime.cs" />
+    <Compile Include="Core\Asn1Encoding.cs" />
+    <Compile Include="Core\Asn1Integer.cs" />
+    <Compile Include="Core\Asn1Object.cs" />
+    <Compile Include="Core\Asn1String.cs" />
+    <Compile Include="Core\Base.cs" />
+    <Compile Include="Core\BigNumber.cs" />
+    <Compile Include="Core\BIO.cs" />
+    <Compile Include="Core\Crypto.cs" />
+    <Compile Include="Core\MemoryTracker.cs" />
+    <Compile Include="Core\Native.cs" />
+    <Compile Include="Core\Objects.cs" />
+    <Compile Include="Core\OpenSslException.cs" />
+    <Compile Include="Core\Password.cs" />
+    <Compile Include="Core\Random.cs" />
+    <Compile Include="Core\Stack.cs" />
+    <Compile Include="Core\Threading.cs" />
+    <Compile Include="Core\Version.cs" />
+    <Compile Include="Crypto\Cipher.cs" />
+    <Compile Include="Crypto\CryptoKey.cs" />
+    <Compile Include="Crypto\DH.cs" />
+    <Compile Include="Crypto\DSA.cs" />
+    <Compile Include="Crypto\EC\BuiltinCurve.cs" />
+    <Compile Include="Crypto\EC\DSASignature.cs" />
+    <Compile Include="Crypto\EC\Group.cs" />
+    <Compile Include="Crypto\EC\Key.cs" />
+    <Compile Include="Crypto\EC\Method.cs" />
+    <Compile Include="Crypto\EC\Point.cs" />
+    <Compile Include="Crypto\HMAC.cs" />
+    <Compile Include="Crypto\MessageDigest.cs" />
+    <Compile Include="Crypto\RSA.cs" />
+    <Compile Include="Log\Log.cs" />
+    <Compile Include="Log\LogLevelEnum.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SSL\AlpnException.cs" />
+    <Compile Include="SSL\ClientCertCallbackHandler.cs" />
+    <Compile Include="SSL\ConnectionEnd.cs" />
+    <Compile Include="SSL\Enums.cs" />
+    <Compile Include="SSL\Extensions\Alpn.cs" />
+    <Compile Include="SSL\Extensions\EnumExtensions.cs" />
+    <Compile Include="SSL\Extensions\Errors.cs" />
+    <Compile Include="SSL\Extensions\SNI.cs" />
+    <Compile Include="SSL\Extensions\SniCallbackHandler.cs" />
+    <Compile Include="SSL\LocalCertificateSelectionHandler.cs" />
+    <Compile Include="SSL\Protocols.cs" />
+    <Compile Include="SSL\RemoteCertificateValidationHandler.cs" />
+    <Compile Include="SSL\Ssl.cs" />
+    <Compile Include="SSL\SslCipher.cs" />
+    <Compile Include="SSL\SslContext.cs" />
+    <Compile Include="SSL\SslMethod.cs" />
+    <Compile Include="SSL\SslStream.cs" />
+    <Compile Include="SSL\SslStreamBase.cs" />
+    <Compile Include="SSL\SslStreamClient.cs" />
+    <Compile Include="SSL\SslStreamServer.cs" />
+    <Compile Include="X509\Configuration.cs" />
+    <Compile Include="X509\Identity.cs" />
+    <Compile Include="X509\PKCS12.cs" />
+    <Compile Include="X509\PKCS7.cs" />
+    <Compile Include="X509\VerifyResult.cs" />
+    <Compile Include="X509\X509Algor.cs" />
+    <Compile Include="X509\X509Certificate.cs" />
+    <Compile Include="X509\X509CertificateAuthority.cs" />
+    <Compile Include="X509\X509CertificateInfo.cs" />
+    <Compile Include="X509\X509Chain.cs" />
+    <Compile Include="X509\X509Extension.cs" />
+    <Compile Include="X509\X509Name.cs" />
+    <Compile Include="X509\X509Object.cs" />
+    <Compile Include="X509\X509Request.cs" />
+    <Compile Include="X509\X509Store.cs" />
+    <Compile Include="X509\X509StoreContext.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="curl-ca-bundle.crt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="libcrypto-1_1.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="libssl-1_1.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="libcrypto-1_1-x64.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="libssl-1_1-x64.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
